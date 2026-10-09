@@ -1,0 +1,329 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+
+/*
+  CampusConnect cinematic theme
+  Load AFTER index.css so these tokens win.
+  Teal + orange "film grade" on near-black (dark) or warm paper (light).
+*/
+
+:root {
+  --bg: #ece6da;
+  --bg-strong: #e3dccd;
+  --surface: rgba(255, 252, 245, 0.7);
+  --surface-strong: #fbf8f1;
+  --surface-alt: rgba(22, 18, 15, 0.05);
+  --text: #16120f;
+  --text-soft: #5f5850;
+  --border: rgba(22, 18, 15, 0.15);
+  --shadow: 0 18px 50px rgba(40, 28, 12, 0.14);
+  --primary: #0b8f80;
+  --primary-deep: #0a6f64;
+  --indigo: #d9501a;
+  --violet: #d9501a;
+  --navy: #14110e;
+  --navy-2: #1b1713;
+  --hero-glow: rgba(11, 143, 128, 0.2);
+  --success: #0b8f80;
+  --warning: #d98a1a;
+  --danger: #c93b2c;
+  --grade: linear-gradient(100deg, #0b8f80, #d9501a);
+  --font-sans: 'Manrope', 'Segoe UI', sans-serif;
+  --font-display: 'Instrument Serif', Georgia, serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+}
+
+:root[data-theme='dark'] {
+  --bg: #07090c;
+  --bg-strong: #0c1014;
+  --surface: rgba(255, 255, 255, 0.04);
+  --surface-strong: #0e1317;
+  --surface-alt: rgba(255, 255, 255, 0.06);
+  --text: #f1ede6;
+  --text-soft: #9aa3a8;
+  --border: rgba(255, 255, 255, 0.12);
+  --shadow: 0 24px 60px rgba(0, 0, 0, 0.5);
+  --primary: #2ee6d0;
+  --primary-deep: #0e8576;
+  --indigo: #ff7a3d;
+  --violet: #ff7a3d;
+  --navy: #07090c;
+  --navy-2: #0c1014;
+  --hero-glow: rgba(46, 230, 208, 0.18);
+  --success: #2ee6d0;
+  --warning: #ffb347;
+  --danger: #ff5a4d;
+  --grade: linear-gradient(100deg, #2ee6d0, #ff7a3d);
+}
+
+/* ---------- base ---------- */
+body,
+body[data-theme='dark'] {
+  font-family: var(--font-sans);
+  background:
+    radial-gradient(ellipse 60% 40% at 15% -5%, rgba(46, 230, 208, 0.12), transparent 70%),
+    radial-gradient(ellipse 50% 40% at 100% 100%, rgba(255, 122, 61, 0.1), transparent 70%),
+    var(--bg);
+  color: var(--text);
+}
+
+body[data-theme='light'] {
+  font-family: var(--font-sans);
+  background:
+    radial-gradient(ellipse 60% 40% at 15% -5%, rgba(11, 143, 128, 0.1), transparent 70%),
+    radial-gradient(ellipse 50% 40% at 100% 100%, rgba(217, 80, 26, 0.08), transparent 70%),
+    var(--bg);
+}
+
+::selection { background: var(--primary); color: #07090c; }
+
+/* film grain over every page (landing has its own) */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0.045;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.9 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+}
+body:has(.cx)::after,
+body:has(.ax)::after { display: none; }
+
+/* scrollbars */
+* { scrollbar-width: thin; scrollbar-color: color-mix(in srgb, var(--text) 25%, transparent) transparent; }
+
+/* ---------- typography ---------- */
+.events-hero h1,
+.resources-library-header h1,
+.resource-detail-header h1,
+.career-hub-header h1,
+.career-detail-header h1,
+.community-hero h1,
+.club-detail-hero h1,
+.placeholder-card h1 {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  font-size: clamp(2.8rem, 6vw, 4.8rem);
+}
+
+.eyebrow,
+.section-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  color: var(--primary);
+}
+
+.label,
+.resource-metadata dt,
+.career-meta-list dt {
+  font-family: var(--font-mono);
+  letter-spacing: 0.12em;
+}
+
+/* ---------- focus ---------- */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--primary) !important;
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--primary) 18%, transparent);
+}
+
+/* ---------- primary actions: teal→orange grade ---------- */
+.primary-link,
+.cc-button-primary,
+.filter-pill.active,
+.resource-action-primary,
+.career-primary-button,
+.community-button.primary {
+  background: var(--grade) !important;
+  color: #07090c !important;
+  border-color: transparent !important;
+  box-shadow: 0 8px 28px color-mix(in srgb, var(--violet) 22%, transparent);
+}
+
+.primary-link:hover,
+.cc-button-primary:hover,
+.resource-action-primary:hover,
+.career-primary-button:hover:not(:disabled),
+.community-button.primary:hover {
+  filter: brightness(1.08);
+}
+
+.resource-action-button:hover,
+.resource-pagination button:hover:not(:disabled) {
+  background: var(--grade);
+  color: #07090c;
+  border-color: transparent;
+}
+
+.resource-filter-pills button.active,
+.learning-hub-tabs button.active {
+  background: var(--grade);
+  color: #07090c;
+  border-color: transparent;
+}
+
+.plain-link { color: var(--primary); }
+
+/* ---------- cards: sharper, filmic ---------- */
+.event-card,
+.featured-event-card,
+.glass-panel,
+.glass-card,
+.resource-card,
+.community-card,
+.career-internship-card,
+.career-description-panel,
+.career-company-card,
+.resource-info-panel,
+.resource-preview-panel,
+.learning-hub,
+.placeholder-card,
+.auth-card {
+  border-radius: 6px;
+  background: var(--surface);
+  border-color: var(--border);
+}
+
+.event-card,
+.featured-event-card,
+.resource-card,
+.community-card,
+.career-internship-card {
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-card:hover,
+.featured-event-card:hover,
+.resource-card:hover,
+.community-card:hover,
+.career-internship-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--primary);
+  box-shadow: 0 22px 50px color-mix(in srgb, var(--primary) 14%, transparent);
+}
+
+/* images get a gentle teal/orange grade */
+.event-card-image,
+.featured-event-card img,
+.event-hero-image,
+.community-card-cover {
+  filter: saturate(1.1) contrast(1.05);
+}
+
+.event-hero-card { border-radius: 6px; }
+.event-hero-overlay { background: linear-gradient(100deg, rgba(5, 7, 10, 0.9), rgba(5, 7, 10, 0.2)); }
+
+/* chips / pills: mono labels */
+.event-badge,
+.event-date-pill,
+.status-pill,
+.registered-chip,
+.event-state,
+.featured-event-card span,
+.career-skill-badge,
+.resource-card-tags span,
+.resource-status {
+  font-family: var(--font-mono);
+  letter-spacing: 0.06em;
+  border-radius: 3px;
+  background: color-mix(in srgb, var(--primary) 10%, transparent);
+  color: var(--primary);
+  border-color: color-mix(in srgb, var(--primary) 28%, transparent);
+}
+
+.filter-pill { border-radius: 4px; }
+
+.progress-bar span { background: var(--grade); }
+
+/* ---------- inputs ---------- */
+.search-bar-wrap,
+.resource-search,
+.career-search {
+  border-radius: 6px;
+  background: var(--surface-strong);
+}
+
+.search-bar-wrap input,
+.event-form input,
+.event-form select,
+.manual-checkin-box input,
+.auth-form input {
+  border-radius: 4px;
+  background: var(--surface-strong);
+}
+
+/* ---------- top navigation (inner pages) ---------- */
+.nav-shell {
+  border-radius: 6px;
+  background: color-mix(in srgb, var(--bg) 72%, transparent);
+  border-color: var(--border);
+  backdrop-filter: blur(18px) saturate(140%);
+}
+.topbar.scrolled .nav-shell,
+.nav-shell:has(.nav-link:hover) { background: color-mix(in srgb, var(--bg) 88%, transparent); }
+.nav-link::after { background: var(--grade); }
+.brand-name, .brand-inline-word { font-family: var(--font-mono); letter-spacing: 0.16em; font-size: 0.78rem; text-transform: uppercase; }
+.brand-mark {
+  border-radius: 50%;
+  border-color: color-mix(in srgb, var(--primary) 50%, transparent);
+  background: radial-gradient(circle at 34% 25%, color-mix(in srgb, var(--primary) 30%, transparent), transparent 70%);
+  box-shadow: 0 0 20px color-mix(in srgb, var(--primary) 30%, transparent);
+}
+.brand-mark-core { border-radius: 50%; transform: none; background: var(--grade); box-shadow: 0 0 16px var(--primary); }
+.brand-mark-core::before, .brand-mark-core::after { display: none; }
+.cc-button { border-radius: 4px; }
+.theme-toggle { border-radius: 4px; }
+.theme-toggle-knob { border-radius: 2px; }
+
+/* ---------- footer ---------- */
+.site-footer { background: color-mix(in srgb, var(--bg) 85%, transparent); }
+.footer-bottom, .site-footer h3 { font-family: var(--font-mono); letter-spacing: 0.1em; font-size: 0.74rem; text-transform: uppercase; }
+
+/* ---------- tables ---------- */
+th {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-soft);
+}
+
+/* ---------- semantic status colours ---------- */
+.resource-status-published { color: var(--success); background: color-mix(in srgb, var(--success) 14%, transparent); }
+.resource-status-pending_review { color: var(--warning); background: color-mix(in srgb, var(--warning) 16%, transparent); }
+.resource-status-rejected { color: var(--danger); background: color-mix(in srgb, var(--danger) 14%, transparent); }
+
+/* ---------- loading states ---------- */
+.community-loading,
+.career-loading,
+.resource-route-loading,
+.ai-loading {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  animation: theme-pulse 1.4s ease-in-out infinite;
+}
+@keyframes theme-pulse { 50% { opacity: 0.35; } }
+
+.loading-spinner { border-color: color-mix(in srgb, var(--primary) 20%, transparent); border-top-color: var(--primary); }
+
+@media (prefers-reduced-motion: reduce) {
+  .community-loading, .career-loading, .resource-route-loading, .ai-loading { animation: none; }
+  .event-card, .featured-event-card, .resource-card, .community-card, .career-internship-card { transition: none; }
+}

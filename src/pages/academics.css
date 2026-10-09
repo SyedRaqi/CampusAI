@@ -1,0 +1,590 @@
+.academic-page {
+  width: min(1120px, 100%);
+  margin: 0 auto;
+  padding: clamp(1rem, 3vw, 2.5rem) 0 4rem;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.academic-heading,
+.academic-heading > nav,
+.academic-card-actions,
+.academic-section-heading,
+.academic-card,
+.academic-class,
+.academic-roster-row {
+  display: flex;
+  align-items: center;
+}
+
+.academic-heading,
+.academic-section-heading,
+.academic-card {
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.academic-heading h1 {
+  margin: .25rem 0 0;
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.academic-heading > nav {
+  flex-wrap: wrap;
+  gap: .55rem;
+}
+
+.academic-heading > nav a,
+.academic-secondary,
+.academic-primary,
+.academic-pill {
+  border: 1px solid rgba(128, 164, 255, .25);
+  border-radius: 999px;
+  padding: .58rem .9rem;
+  color: inherit;
+  text-decoration: none;
+  font: inherit;
+}
+
+.academic-heading > nav a,
+.academic-secondary,
+.academic-pill {
+  background: rgba(90, 120, 205, .1);
+}
+
+.academic-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .45rem;
+  background: linear-gradient(120deg, #2563eb, #4f46e5);
+  color: white;
+  cursor: pointer;
+}
+
+.academic-primary:disabled {
+  cursor: not-allowed;
+  opacity: .55;
+}
+
+.academic-section-heading h2,
+.academic-section h2,
+.academic-form h2 {
+  display: flex;
+  align-items: center;
+  gap: .55rem;
+  margin: 0;
+}
+
+.academic-section-heading p,
+.academic-card p,
+.academic-class p,
+.academic-muted,
+.academic-callout {
+  margin: .35rem 0 0;
+  opacity: .72;
+}
+
+.academic-card-list {
+  display: grid;
+  gap: .85rem;
+}
+
+.academic-card,
+.academic-section,
+.academic-form,
+.academic-day {
+  border: 1px solid rgba(255, 255, 255, .09);
+  border-radius: 18px;
+  background: rgba(16, 24, 40, .62);
+  padding: 1.1rem;
+}
+
+.academic-card {
+  align-items: flex-start;
+}
+
+.academic-card-icon {
+  flex: 0 0 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 13px;
+  background: rgba(74, 105, 218, .18);
+  color: #a9bcff;
+}
+
+.academic-card-main {
+  flex: 1;
+}
+
+.academic-card h2 {
+  margin: .18rem 0;
+  font-size: 1.15rem;
+}
+
+.academic-card-code {
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  font-size: .76rem;
+}
+
+.academic-description {
+  max-width: 70ch;
+}
+
+.academic-card-actions {
+  flex-wrap: wrap;
+  gap: .55rem;
+  margin-top: .9rem;
+}
+
+.academic-resource-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: .8rem;
+  padding: .85rem;
+  border: 1px solid rgba(255, 255, 255, .1);
+  border-radius: 12px;
+  color: inherit;
+  text-decoration: none;
+}
+
+.academic-resource-row small {
+  display: block;
+  margin-top: .25rem;
+  opacity: .68;
+}
+
+.academic-notice,
+.academic-callout {
+  display: flex;
+  align-items: flex-start;
+  gap: .55rem;
+  padding: .85rem 1rem;
+  border: 1px solid rgba(94, 135, 255, .22);
+  border-radius: 13px;
+  background: rgba(62, 91, 183, .12);
+}
+
+.academic-error {
+  border-color: rgba(248, 113, 113, .3);
+  color: #fecaca;
+}
+
+.academic-empty {
+  padding: 1.3rem;
+  border: 1px dashed rgba(255, 255, 255, .18);
+  border-radius: 14px;
+  opacity: .72;
+}
+
+.academic-week {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
+  gap: .9rem;
+}
+
+.academic-day h2 {
+  margin: 0 0 .8rem;
+  font-size: 1.1rem;
+}
+
+.academic-class {
+  align-items: flex-start;
+  gap: .8rem;
+  padding: .8rem 0;
+  border-top: 1px solid rgba(255, 255, 255, .08);
+}
+
+.academic-class time {
+  min-width: 6.4rem;
+  color: #bdcaff;
+  font-variant-numeric: tabular-nums;
+}
+
+.academic-class div {
+  flex: 1;
+}
+
+.academic-class > span {
+  opacity: .68;
+  text-align: right;
+}
+
+.academic-attendance-card {
+  align-items: center;
+}
+
+.academic-attendance-rate {
+  display: grid;
+  justify-items: end;
+  gap: .25rem;
+  text-align: right;
+}
+
+.academic-attendance-rate strong {
+  font-size: 1.9rem;
+}
+
+.academic-attendance-rate span {
+  opacity: .7;
+  font-size: .85rem;
+}
+
+.academic-attendance-rate .academic-risk {
+  color: #fbbf24;
+}
+
+.academic-admin-analytics {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, .08);
+  padding: .7rem 0;
+}
+
+.academic-admin-analytics p,
+.academic-admin-analytics small {
+  display: block;
+  margin: .3rem 0 0;
+  opacity: .68;
+}
+
+.academic-section {
+  display: grid;
+  gap: 1rem;
+}
+
+.academic-overview {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: .8rem;
+}
+
+.academic-overview article {
+  display: grid;
+  gap: .35rem;
+  padding: 1rem;
+  border: 1px solid rgba(255, 255, 255, .09);
+  border-radius: 15px;
+  background: rgba(16, 24, 40, .62);
+}
+
+.academic-overview article span,
+.academic-overview article small {
+  opacity: .7;
+}
+
+.academic-overview article strong {
+  font-size: 1.4rem;
+}
+
+.academic-overview article .academic-overview-note {
+  font-size: 1rem;
+}
+
+.academic-day-selector {
+  display: none;
+  gap: .5rem;
+}
+
+.academic-day-selector select,
+.academic-projection input {
+  min-height: 42px;
+  padding: .6rem .7rem;
+  border: 1px solid rgba(255, 255, 255, .17);
+  border-radius: 10px;
+  background: #111a2d;
+  color: inherit;
+  font: inherit;
+}
+
+.academic-week-mobile {
+  display: none;
+}
+
+.academic-projection label {
+  display: flex;
+  align-items: center;
+  gap: .7rem;
+}
+
+.academic-projection input {
+  width: 6rem;
+}
+
+.academic-trend-list {
+  display: grid;
+  gap: .75rem;
+}
+
+.academic-trend-row {
+  display: grid;
+  grid-template-columns: minmax(100px, .7fr) minmax(100px, 2fr) minmax(115px, .8fr);
+  align-items: center;
+  gap: .8rem;
+}
+
+.academic-trend-row progress {
+  width: 100%;
+  accent-color: #6888ff;
+}
+
+.academic-class-state {
+  display: grid;
+  gap: .25rem;
+  margin: .6rem 0 0;
+  padding: .75rem;
+  border-radius: 12px;
+  background: rgba(72, 105, 210, .12);
+}
+
+.academic-class-state strong {
+  color: #bdcaff;
+}
+
+.academic-muted {
+  opacity: .7;
+}
+
+.academic-today-list {
+  display: grid;
+}
+
+.academic-today-row {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: .75rem;
+  padding: .7rem 0;
+  border-top: 1px solid rgba(255, 255, 255, .08);
+}
+
+.academic-today-row time {
+  color: #bdcaff;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.academic-today-row small {
+  display: block;
+  margin-top: .2rem;
+  opacity: .68;
+}
+
+.academic-today-row a {
+  color: #bdcaff;
+}
+
+.academic-form {
+  display: grid;
+  gap: .9rem;
+}
+
+.academic-session-form {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+  align-items: end;
+}
+
+.academic-session-form h2 {
+  grid-column: 1 / -1;
+}
+
+.academic-form label,
+.academic-roster-row {
+  display: grid;
+  gap: .4rem;
+}
+
+.academic-form input,
+.academic-form select,
+.academic-roster select,
+.academic-roster input {
+  width: 100%;
+  min-height: 42px;
+  padding: .6rem .7rem;
+  border: 1px solid rgba(255, 255, 255, .17);
+  border-radius: 10px;
+  background: #111a2d;
+  color: inherit;
+  font: inherit;
+}
+
+.academic-admin-form {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 205px), 1fr));
+  align-items: end;
+}
+
+.academic-period-list,
+.academic-session-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+}
+
+.academic-admin-status,
+.academic-admin-list article {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .8rem;
+  padding: .7rem;
+  border: 1px solid rgba(255, 255, 255, .1);
+  border-radius: 11px;
+  background: rgba(10, 20, 40, .4);
+}
+
+.academic-admin-status select,
+.academic-admin-list select {
+  min-height: 38px;
+  padding: .45rem .6rem;
+  border: 1px solid rgba(255, 255, 255, .17);
+  border-radius: 9px;
+  background: #111a2d;
+  color: inherit;
+  font: inherit;
+}
+
+.academic-admin-list {
+  display: grid;
+  gap: .5rem;
+}
+
+.academic-admin-list article span {
+  min-width: 0;
+}
+
+.academic-admin-list small {
+  display: block;
+  margin-top: .2rem;
+  opacity: .68;
+}
+
+.academic-checkbox {
+  grid-template-columns: auto 1fr;
+  align-items: center;
+}
+
+.academic-checkbox input {
+  width: auto;
+  min-height: auto;
+}
+
+.academic-session {
+  display: flex;
+  flex: 1 1 260px;
+  justify-content: space-between;
+  align-items: center;
+  gap: .8rem;
+  padding: .75rem;
+  border: 1px solid rgba(255, 255, 255, .12);
+  border-radius: 12px;
+  background: rgba(10, 20, 40, .55);
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.academic-session.active {
+  border-color: #6888ff;
+}
+
+.academic-session small {
+  display: block;
+  opacity: .68;
+}
+
+.academic-roster {
+  display: grid;
+  gap: .5rem;
+}
+
+.academic-roster-row {
+  grid-template-columns: minmax(130px, 1fr) minmax(140px, .7fr) minmax(170px, 1fr);
+  gap: .7rem;
+  padding: .65rem 0;
+  border-top: 1px solid rgba(255, 255, 255, .08);
+}
+
+.academic-count {
+  display: inline-grid;
+  place-items: center;
+  min-width: 1.7rem;
+  height: 1.7rem;
+  border-radius: 50%;
+  background: rgba(95, 121, 219, .22);
+  font-size: .85rem;
+}
+
+@media (max-width: 680px) {
+  .academic-heading,
+  .academic-section-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .academic-card {
+    gap: .7rem;
+    padding: .9rem;
+  }
+
+  .academic-class {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: .25rem;
+  }
+
+  .academic-class > span {
+    text-align: left;
+  }
+
+  .academic-day-selector {
+    display: grid;
+  }
+
+  .academic-week-desktop {
+    display: none;
+  }
+
+  .academic-week-mobile {
+    display: grid;
+  }
+
+  .academic-attendance-card {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .academic-attendance-rate {
+    justify-items: start;
+    text-align: left;
+  }
+
+  .academic-roster-row {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .academic-roster-row strong {
+    grid-column: 1 / -1;
+  }
+
+  .academic-trend-row {
+    grid-template-columns: 1fr auto;
+  }
+
+  .academic-trend-row progress {
+    grid-row: 2;
+    grid-column: 1 / -1;
+  }
+
+  .academic-today-row {
+    grid-template-columns: auto 1fr;
+  }
+
+  .academic-today-row a {
+    grid-column: 2;
+  }
+}
