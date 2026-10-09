@@ -1,3 +1,4 @@
+
 name: Deploy CampusAI to GitHub Pages
 
 on:
@@ -31,7 +32,7 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-            - name: Build application
+      - name: Build application
         run: npm run build
         env:
           VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
