@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>CampusConnect AI</title>
+    <script>
+      const segmentCount = 1;
+      const locationParts = window.location;
+      const redirectUrl =
+        locationParts.protocol +
+        "//" +
+        locationParts.host +
+        locationParts.pathname
+          .split("/")
+          .slice(0, segmentCount + 1)
+          .join("/") +
+        "/?/" +
+        locationParts.pathname
+          .split("/")
+          .slice(segmentCount + 1)
+          .join("/") +
+        locationParts.search.replace(/&/g, "~and~") +
+        locationParts.hash;
+
+      window.location.replace(redirectUrl);
+    </script>
+  </head>
+  <body></body>
+</html>
