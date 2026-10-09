@@ -1,6 +1,6 @@
 import { lazy, Suspense, useEffect, useState } from 'react'
 import { ArrowRight } from 'lucide-react'
-import { BrowserRouter, Link, Navigate, Route, Routes } from 'react-router-dom'
+import { HashRouter, Link, Navigate, Route, Routes } from 'react-router-dom'
 import PageContainer from './components/PageContainer'
 import ProtectedRoute from './components/ProtectedRoute'
 import RoleRoute from './components/RoleRoute'
@@ -108,7 +108,7 @@ function App() {
   }
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <AuthProvider>
         <Phase10Header />
         <Routes>
@@ -391,7 +391,7 @@ function App() {
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </AuthProvider>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 
