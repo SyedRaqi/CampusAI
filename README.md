@@ -118,7 +118,7 @@ The AI workspace is **authenticated**, so only signed-in users get in. Nine tool
 
 > 🔐 **House rule:** the AI provider key lives in Supabase Edge Function secrets. It never goes in browser code, `.env.local`, or any `VITE_*` variable.
 
-<img src="cinema-walkway.svg" width="100%" alt="Students walking along a lamp-lit campus path" />
+<img src="cinema-walkway (3).svg" width="100%" alt="Students walking along a lamp-lit campus path" />
 
 <a name="ops"></a>
 <img src="cinema-h-ops.svg" width="100%" alt="The Ops Deck" />
@@ -145,7 +145,7 @@ The AI workspace is **authenticated**, so only signed-in users get in. Nine tool
 <img src="cinema-security.svg" width="100%" alt="Four layers of defence protecting campus data" />
 </div>
 
-<img src="cinema-walkway.svg" width="100%" alt="Students walking along a lamp-lit campus path" />
+<img src="cinema-walkway (3).svg" width="100%" alt="Students walking along a lamp-lit campus path" />
 
 <a name="movein"></a>
 <img src="cinema-h-movein.svg" width="100%" alt="Move-In Day" />
@@ -197,7 +197,7 @@ npm run lint
 4. **Deploy functions.** Deploy the authenticated Edge Functions and configure AI credentials as Supabase Edge Function secrets. Follow [`docs/AI_SETUP.md`](docs/AI_SETUP.md); never put the provider key in browser code or `.env.local`.
 5. **Verify.** Check authorization, RLS, Storage, Realtime, scheduled tasks, and the AI provider against a non-production project before production rollout.
 
-<img src="cinema-walkway.svg" width="100%" alt="Students walking along a lamp-lit campus path" />
+<img src="cinema-walkway (3).svg" width="100%" alt="Students walking along a lamp-lit campus path" />
 
 <a name="blueprint"></a>
 <img src="cinema-h-blueprint.svg" width="100%" alt="Campus Blueprint" />
