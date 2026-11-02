@@ -2,7 +2,7 @@
 
 <div align="center">
 
-<img src="cinema-hero.svg" width="100%" alt="CampusConnect AI: a glowing campus at dusk with a clock tower, lamp-lit paths and fireflies" />
+<img src="cinema-hero (3).svg" width="100%" alt="CampusConnect AI: a glowing campus at dusk with a clock tower, lamp-lit paths and fireflies" />
 
 <a href="https://github.com/SyedRaqi/CampusAI">
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&duration=3000&pause=900&color=5EEAD4&center=true&vCenter=true&width=780&lines=One+campus.+One+connected+place.;Events%2C+learning%2C+careers%2C+community.;Three+roles.+One+platform.;An+AI+study+hall+for+signed-in+students." alt="Typing animation" />
@@ -31,11 +31,11 @@
 
 <br/><br/>
 
-<img src="cinema-stats.svg" width="100%" alt="3 roles, 9 AI tools, 5 deploy gates, 1 connected campus" />
+<img src="cinema-stats (2).svg" width="100%" alt="3 roles, 9 AI tools, 5 deploy gates, 1 connected campus" />
 
 </div>
 
-<img src="cinema-walkway.svg" width="100%" alt="Students walking along a lamp-lit campus path" />
+<img src="cinema-walkway (3).svg" width="100%" alt="Students walking along a lamp-lit campus path" />
 
 <a name="orientation"></a>
 <img src="cinema-h-orientation.svg" width="100%" alt="Orientation Day" />
