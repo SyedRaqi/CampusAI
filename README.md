@@ -64,7 +64,7 @@ One thing to know before you wander in: CampusConnect AI extends the existing **
 <img src="cinema-journey.svg" width="100%" alt="Student journey: sign in, discover, register, join, chat, ask the AI, grow" />
 </div>
 
-<img src="cinema-walkway.svg" width="100%" alt="Students walking along a lamp-lit campus path" />
+<img src="cinema-walkway (3).svg" width="100%" alt="Students walking along a lamp-lit campus path" />
 
 <a name="atlas"></a>
 <img src="cinema-h-atlas.svg" width="100%" alt="Campus Atlas" />
